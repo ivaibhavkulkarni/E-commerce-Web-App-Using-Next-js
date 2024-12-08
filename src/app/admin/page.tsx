@@ -1,10 +1,12 @@
 "use client";
 
 import React, { useState } from "react";
+import { useRouter } from "next/navigation";
 
 const Login = () => {
   const [username, setUsername] = useState<string>("");
   const [password, setPassword] = useState<string>("");
+  const router = useRouter();
 
   const handleLogin = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -13,8 +15,7 @@ const Login = () => {
   };
 
   const handleCreateUser = () => {
-    console.log("Redirecting to Create User Page...");
-    // Add navigation logic here
+    router.push("/createUser"); // Redirect to Create User page
   };
 
   return (
@@ -60,7 +61,7 @@ const Login = () => {
             onClick={handleCreateUser}
             className="w-full px-4 py-2 mt-2 text-[#8BC34A] border border-[#8BC34A] rounded-md hover:bg-[#8BC34A] hover:text-white"
           >
-            Create User
+            Create New User
           </button>
         </div>
       </div>
