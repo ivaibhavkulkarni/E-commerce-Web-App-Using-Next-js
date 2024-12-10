@@ -1,8 +1,5 @@
 "use client";
 
-import { FcGoogle } from "react-icons/fc";
-import { FaApple } from "react-icons/fa6";
-
 import React, { useState } from "react";
 import { useRouter } from "next/navigation";
 
@@ -20,14 +17,6 @@ const Login = () => {
   const handleCreateUser = () => {
     router.push("/admin/createUser"); // Redirect to Create User page
   };
-
-  const handleAppleLogin = () => {
-    console.log("Apple login Clicked")
-  }
-
-  const handleGoogleLogin = () => {
-    console.log("Google Login Clicked")
-  }
 
   return (
     <div className="flex items-center justify-center min-h-screen bg-gray-100">
@@ -74,10 +63,6 @@ const Login = () => {
           >
             Create New User
           </button>
-        </div>
-        <div className="flex justify-center items-center w-full mt-5 space-x-4 gap-x-2">
-            <FaApple className="w-8 h-8 text-black cursor-pointer" onClick={handleAppleLogin}/>
-            <FcGoogle className="w-8 h-8 cursor-pointer" onClick={handleGoogleLogin}/>
         </div>
       </div>
     </div>
