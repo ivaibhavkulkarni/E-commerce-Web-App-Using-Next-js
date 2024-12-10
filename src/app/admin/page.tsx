@@ -15,7 +15,7 @@ const Login = () => {
   };
 
   const handleCreateUser = () => {
-    router.push("/createUser"); // Redirect to Create User page
+    router.push("/admin/createUser"); // Redirect to Create User page
   };
 
   return (
